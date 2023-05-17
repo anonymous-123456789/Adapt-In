@@ -45,7 +45,7 @@ Follow below steps for downloading raw datasets and then pre-processing the requ
 Multiple feature interaction layers are supported for comparison.
 For each type of feature interaction layer, use specific parameters defined below:
 
-### Concatenation
+### Concatenation (LR)
 ```shell
 	--arch-interaction-op=cat
 ```
