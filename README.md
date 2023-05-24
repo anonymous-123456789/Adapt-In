@@ -118,7 +118,7 @@ For each type of feature interaction layer, use specific parameters defined belo
 ## Running MTRec
 MTRec can be run on a single node with multiple GPUs system using following script
 ```
-     ./run_dlrm_MTRec.sh
+     ./run_MTRec.sh
 ```
 
 Requirements
