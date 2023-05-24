@@ -1,6 +1,6 @@
 # MTRec - MTRec: Transforming Recommender Models with Advanced Feature Interactions
 
-<img src="images/MTRec.png" alt="MTRec" style="width:800px;display:block;margin-left:auto;margin-right:auto;"/><br>
+<img src="images/MTRec.png" alt="MTRec" style="width:500px;display:block;margin-left:auto;margin-right:auto;"/><br>
 <div style="text-align: center; margin: 20pt">
   <figcaption style="font-style: italic;"></figcaption>
 </div>
@@ -9,16 +9,16 @@ This repository contains the MTRec based feature interaction layer for faster tr
 
 ## Dataset Pre-processing
 
-Publicly available datasets (Criteo Kaggle, Criteo Terabyte etc) can be downloaded and required pre-processing for training.
+Publicly available datasets (Criteo Kaggle, Criteo Terabyte Taobao Alibaba etc) can be downloaded and required pre-processing for training.
 
 Follow below steps for downloading raw datasets and then pre-processing the required dataset for training purpose.
 
 ```
-     cd MTRec
+     cd MTRec/Non_Seq_Rec_Model
 
 ```
 1) The code supports interface with the [Criteo Kaggle Display Advertising Challenge Dataset](https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/).
-   - Please do the following to prepare the dataset for use with DLRM code:
+   - Please do the following to prepare the dataset for use with Non Sequential Recommendation code:
      - First, specify the raw data file (train.txt) as downloaded with --raw-data-file=<./input/kaggle/train.txt>
      - This is then pre-processed (categorize, concat across days...) to allow using with dlrm code
      - The processed data is stored as *.npz file in ./input/kaggle/*.npz
@@ -29,7 +29,7 @@ Follow below steps for downloading raw datasets and then pre-processing the requ
      ```
 
 2) The code supports interface with the [Criteo Terabyte Dataset](https://labs.criteo.com/2013/12/download-terabyte-click-logs/).
-   - Please do the following to prepare the dataset for use with DLRM code:
+   - Please do the following to prepare the dataset for use with Non Sequential Recommendation code:
      - First, download the raw data files day_0.gz, ...,day_23.gz and unzip them
      - Specify the location of the unzipped text files day_0, ...,day_23, using --raw-data-file=<./input/terabyte/day> (the day number will be appended automatically)
      - These are then pre-processed (categorize, concat across days...) to allow using with dlrm code
@@ -39,6 +39,34 @@ Follow below steps for downloading raw datasets and then pre-processing the requ
     ```
       ./bench/dlrm_s_criteo_terabyte.sh
     ```
+
+3) The code supports interface with the [Taobao User Behavior Dataset](https://tianchi.aliyun.com/dataset/dataDetail?dataId=649&userId=1).
+- Please do the following to prepare the dataset for use with Sequential Recommendation code:
+    ```
+     cd MTRec/Seq_Rec_Model
+
+  ```
+    - Download UserBehavior.csv.zip and UserBehavior.csv.zip.md5 into directory
+      ```
+      ./data/taobao_data
+      ```
+    - Check the md5sum hash and unzip
+       ```
+       md5sum UserBehavior.csv.zip
+       unzip UserBehavior.csv.zip
+       ```
+    - Run preprocessing to create input files (*taobao_train.txt* and *taobao_test.txt*)
+       ```
+       python ./tools/taobao_prepare.py
+       ```
+    - Copy input files (*taobao_train.txt* and *taobao_test.txt*) to ./input
+       ```
+       cp ./data/taobao_data/*.txt ./input/.
+       ```
+    - Run preprocessing to create processed files (*taobao_train_t20.npz* *taobao_val_t20.npz* *train.npz* *val.npz*)
+       ```
+       ./tbsm_processing.sh
+       ```
 
 ## Feature Interaction
 
