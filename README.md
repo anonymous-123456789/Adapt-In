@@ -115,8 +115,8 @@ For each type of feature interaction layer, use specific parameters defined belo
   --mask-threshold=<Mask threshold of each head separated by ->
 ```
 
-## Running MTRec
-MTRec can be run on a single node with multiple GPUs system using following script
+## Running Adapt-In
+Adapt-In can be run on a single node with multiple GPUs system using following script
 ```
      ./run_AdaptIn.sh
 ```
