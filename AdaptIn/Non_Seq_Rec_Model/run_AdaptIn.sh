@@ -1,4 +1,4 @@
-python MTRec.py --arch-sparse-feature-size=64 \
+python AdaptIn.py --arch-sparse-feature-size=64 \
 					--arch-mlp-bot="13-512-256-64" \
 					--arch-mlp-top="512-512-256-1" \
 					--arch-interaction-op=transformers \

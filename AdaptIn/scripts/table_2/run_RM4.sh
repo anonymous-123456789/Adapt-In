@@ -1,4 +1,4 @@
-python ../../Seq_Rec_Model/MTRec.py  --mode="train-test" \
+python ../../Seq_Rec_Model/AdaptIn.py  --mode="train-test" \
 				--use-gpu \
 				--arch-interaction-op=transformers \
 				--num-encoder-layers=1 \
@@ -9,8 +9,9 @@ python ../../Seq_Rec_Model/MTRec.py  --mode="train-test" \
 				--activation=relu \
 				--dlrm-path=../../Seq_Rec_Model/dlrm \
 				--datatype="taobao" \
-				--model-type="rnn" \
-				--rnn-num-layers=5 \
+				--model-type="tsl" \
+				--tsl-inner="def" \
+				--tsl-num-heads=1 \
 				--num-train-pts=690000 \
 				--num-val-pts=300000 \
 				--points-per-user=10 \
@@ -37,4 +38,4 @@ python ../../Seq_Rec_Model/MTRec.py  --mode="train-test" \
 				--arch-mlp-top="15-15" \
 				--tsl-mlp="15-15" \
 				--arch-mlp="60-1" \
-				--mask-threshold=0.001-0.01
+				--mask-threshold=0.1-0.01

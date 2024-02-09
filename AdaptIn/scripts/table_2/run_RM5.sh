@@ -1,4 +1,4 @@
-python ../../Seq_Rec_Model/MTRec.py  --mode="train-test" \
+python ../../Seq_Rec_Model/AdaptIn.py  --mode="train-test" \
 				--use-gpu \
 				--arch-interaction-op=transformers \
 				--num-encoder-layers=1 \

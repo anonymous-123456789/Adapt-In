@@ -1072,7 +1072,7 @@ if __name__ == "__main__":
 	if not path.exists(str(args.dlrm_path)):
 		sys.exit("Please provide path to DLRM as --dlrm-path")
 	sys.path.insert(1, args.dlrm_path)
-	import MTRec_wo_LN_non_seq as dlrm
+	import AdaptIn_wo_LN_non_seq as dlrm
 
 	if args.datatype == "taobao" and args.arch_embedding_size != "987994-4162024-9439":
 		sys.exit(

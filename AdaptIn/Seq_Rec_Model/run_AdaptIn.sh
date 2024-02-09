@@ -1,13 +1,12 @@
-python ../../Seq_Rec_Model/MTRec_wo_LN.py  --mode="train-test" \
+python AdaptIn.py  --mode="train-test" \
 				--use-gpu \
 				--arch-interaction-op=transformers \
 				--num-encoder-layers=1 \
 				--num-attention-heads=2 \
 				--feedforward-dim=128 \
-				--dropout=0.01 \
 				--norm-first=True \
 				--activation=relu \
-				--dlrm-path=../../Seq_Rec_Model/dlrm \
+				--dlrm-path=./dlrm \
 				--datatype="taobao" \
 				--model-type="tsl" \
 				--tsl-inner="def" \
@@ -38,4 +37,4 @@ python ../../Seq_Rec_Model/MTRec_wo_LN.py  --mode="train-test" \
 				--arch-mlp-top="15-15" \
 				--tsl-mlp="15-15" \
 				--arch-mlp="60-1" \
-				--mask-threshold=0.1-0.01
+				--mask-threshold=0.001-0.01

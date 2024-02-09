@@ -1,4 +1,4 @@
-python ../../Non_Seq_Rec_Model/MTRec_wo_LN.py --arch-sparse-feature-size=64 \
+python ../../Non_Seq_Rec_Model/AdaptIn_wo_LN.py --arch-sparse-feature-size=64 \
 					--arch-mlp-bot="13-512-256-64" \
 					--arch-mlp-top="512-512-256-1" \
 					--max-ind-range=100000000 \

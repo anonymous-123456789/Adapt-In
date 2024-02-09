@@ -1,4 +1,4 @@
-python ../../Non_Seq_Rec_Model/MTRec_wo_LN.py --arch-sparse-feature-size=16 \
+python ../../Non_Seq_Rec_Model/AdaptIn.py --arch-sparse-feature-size=16 \
 					--arch-mlp-bot="1-512-256-64-16" \
 					--arch-mlp-top="512-256-1" \
 					--arch-interaction-op=transformers \
@@ -23,6 +23,7 @@ python ../../Non_Seq_Rec_Model/MTRec_wo_LN.py --arch-sparse-feature-size=16 \
 					--test-mini-batch-size=16384 \
 					--test-num-workers=12 \
 					--test-freq=4096 \
-					--nepochs=1 \
+					--nepochs=5 \
 					--mlperf-logging \
-					--numpy-rand-seed=123
+					--numpy-rand-seed=123 \
+					--mlperf-auc-threshold=0.77

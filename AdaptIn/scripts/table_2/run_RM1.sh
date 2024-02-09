@@ -1,4 +1,4 @@
-python ../../Non_Seq_Rec_Model/MTRec.py --arch-sparse-feature-size=16 \
+python ../../Non_Seq_Rec_Model/AdaptIn.py --arch-sparse-feature-size=16 \
 					--arch-mlp-bot="13-512-256-64-16" \
 					--arch-mlp-top="512-256-1" \
 					--arch-interaction-op=transformers \

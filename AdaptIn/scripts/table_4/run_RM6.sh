@@ -1,16 +1,16 @@
-python MTRec.py  --mode="train-test" \
+python ../../Seq_Rec_Model/AdaptIn_wo_LN.py  --mode="train-test" \
 				--use-gpu \
 				--arch-interaction-op=transformers \
 				--num-encoder-layers=1 \
 				--num-attention-heads=2 \
 				--feedforward-dim=128 \
+				--dropout=0.01 \
 				--norm-first=True \
 				--activation=relu \
-				--dlrm-path=./dlrm \
+				--dlrm-path=../../Seq_Rec_Model/dlrm \
 				--datatype="taobao" \
-				--model-type="tsl" \
-				--tsl-inner="def" \
-				--tsl-num-heads=1 \
+				--model-type="rnn" \
+				--rnn-num-layers=5 \
 				--num-train-pts=690000 \
 				--num-val-pts=300000 \
 				--points-per-user=10 \

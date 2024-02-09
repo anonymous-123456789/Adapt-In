@@ -1,4 +1,4 @@
-python ../../Non_Seq_Rec_Model/MTRec.py --arch-sparse-feature-size=64 \
+python ../../Non_Seq_Rec_Model/AdaptIn.py --arch-sparse-feature-size=64 \
 					--arch-mlp-bot="13-512-256-64" \
 					--arch-mlp-top="512-512-256-1" \
 					--max-ind-range=100000000 \
@@ -25,6 +25,7 @@ python ../../Non_Seq_Rec_Model/MTRec.py --arch-sparse-feature-size=64 \
 					--test-freq=4096 \
 					--memory-map \
 					--data-sub-sample-rate=0.875 \
-					--nepochs=1 \
+					--nepochs=5 \
 					--mlperf-logging \
-					--numpy-rand-seed=123
+					--numpy-rand-seed=123 \
+					--mlperf-auc-threshold=0.792

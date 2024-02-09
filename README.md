@@ -1,11 +1,11 @@
-# MTRec - MTRec: Transforming Recommender Models with Advanced Feature Interactions
+# Adapt-In: Adaptive Feature Interaction Selection for Deep Sparse Networks
 
 <img src="images/MTRec.png" alt="MTRec" style="width:500px;display:block;margin-left:auto;margin-right:auto;"/><br>
 <div style="text-align: center; margin: 20pt">
   <figcaption style="font-style: italic;"></figcaption>
 </div>
 
-This repository contains the MTRec based feature interaction layer for faster training and convergence of recommendation models.
+This repository contains the Adapt-In based feature interaction layer for faster training and convergence of recommendation models.
 
 ## Dataset Pre-processing
 
@@ -14,7 +14,7 @@ Publicly available datasets (Criteo Kaggle, Criteo Terabyte Taobao Alibaba etc) 
 Follow below steps for downloading raw datasets and then pre-processing the required dataset for training purpose.
 
 ```
-     cd MTRec/Non_Seq_Rec_Model
+     cd AdaptIn/Non_Seq_Rec_Model
 
 ```
 1) The code supports interface with the [Criteo Kaggle Display Advertising Challenge Dataset](https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset/).
@@ -43,7 +43,7 @@ Follow below steps for downloading raw datasets and then pre-processing the requ
 3) The code supports interface with the [Taobao User Behavior Dataset](https://tianchi.aliyun.com/dataset/dataDetail?dataId=649&userId=1).
 - Please do the following to prepare the dataset for use with Sequential Recommendation code:
     ```
-     cd MTRec/Seq_Rec_Model
+     cd AdaptIn/Seq_Rec_Model
 
   ```
     - Download UserBehavior.csv.zip and UserBehavior.csv.zip.md5 into directory
@@ -118,7 +118,7 @@ For each type of feature interaction layer, use specific parameters defined belo
 ## Running MTRec
 MTRec can be run on a single node with multiple GPUs system using following script
 ```
-     ./run_MTRec.sh
+     ./run_AdaptIn.sh
 ```
 
 Requirements
